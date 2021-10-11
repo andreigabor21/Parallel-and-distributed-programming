@@ -1,99 +1,90 @@
 package ro.ubb.logic;
 
+import lombok.Data;
 import ro.ubb.exception.NoSuchProductException;
 import ro.ubb.model.Bill;
-import ro.ubb.model.Inventory;
 import ro.ubb.model.Product;
 
 import java.util.*;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
-public class Shop implements Runnable {
+import static ro.ubb.model.Constants.*;
 
-    private final Inventory inventory;
-    private final List<Bill> bills;
+@Data
+public class Shop {
+
+    private List<Product> products;
+    private List<Bill> bills;
     private int money;
-    private final Lock lock;
+    private boolean check;
 
-    public Shop(Inventory inventory) {
-        this.inventory = inventory;
+    public Shop() {
         bills = new ArrayList<>();
         money = 0;
-        lock = new ReentrantLock();
+        check = false;
     }
 
-    @Override
-    public void run() { //make sales
-        int billsCount = new Random().nextInt(40) + 10;
+    public void makeRandomSales() {
+        int billsCount = new Random().nextInt(BILLS_COUNT_UPPER_BOUND) + BILLS_COUNT_LOWER_BOUND;
         for (int i = 0; i < billsCount; i++) {
             makeSales();
+//            runRandomCorrectnessCheck();
         }
     }
 
     private void makeSales() {
-        int productsCount = new Random().nextInt(30) + 10;
+        int productsCount = new Random().nextInt(PRODUCTS_COUNT_UPPER_BOUND) + PRODUCTS_COUNT_LOWER_BOUND;
         Bill bill = new Bill();
         for (int i = 0; i < productsCount; i++) {
             sellRandomProduct(bill);
         }
-        lock.lock();
         this.bills.add(bill);
-        lock.unlock();
     }
 
     private void sellRandomProduct(Bill bill) {
         Product productToSell = getRandomProduct();
         int quantityToRemove = getRandomQuantity();
-        try {
-            lock.lock();
-            inventory.remove(productToSell, quantityToRemove);
+        if(productToSell.getTotalQuantity() >= quantityToRemove) {
+            productToSell.getLock().lock();
+
+            productToSell.setTotalQuantity(productToSell.getTotalQuantity() - quantityToRemove);
             this.money += productToSell.getPrice() * quantityToRemove;
-            bill.add(productToSell, quantityToRemove);
-            lock.unlock();
-        } catch (NoSuchProductException ignored) {
+            bill.addLine(productToSell, quantityToRemove);
+
+            productToSell.getLock().unlock();
+        }
+    }
+
+    private void runRandomCorrectnessCheck() {
+        Random random = new Random();
+        if (random.nextInt(10) == 0) {
+            verifySum();
         }
     }
 
     public void verifySum() {
-        System.err.println("Verfying the money...");
+        System.err.println("Verifying the money...");
         int moneyFromBills = bills.stream()
-                .mapToInt(Bill::getMoneyFromBill)
+                .mapToInt(Bill::getMoney)
                 .sum();
         if (moneyFromBills != money) {
             System.err.println("Money verification failed!");
+        } else {
+            System.err.println("Money verification is good!");
         }
-        System.out.println(moneyFromBills);
-        System.out.println(money);
     }
 
     private Product getRandomProduct() {
-        Set<Product> products = inventory.getProducts();
-        return getRandomItemFromSet(products);
+        return getRandomItemFromList(products);
     }
 
-    private Product getRandomItemFromSet(Set<Product> items) {
+    private Product getRandomItemFromList(List<Product> items) {
         Random random = new Random();
-        // Generate a random number using nextInt
-        // method of the Random class.
-        int randomNumber = random.nextInt(items.size() + 1);
-        Iterator<Product> iterator = items.iterator();
-        int currentIndex = 0;
-        Product randomElement = null;
-        // iterate the HashSet
-        while (iterator.hasNext()) {
-            randomElement = iterator.next();
-            // if current index is equal to random number
-            if (currentIndex == randomNumber)
-                return randomElement;
-            // increase the current index
-            currentIndex++;
-        }
-        return randomElement;
+        int randomIndex = random.nextInt(items.size());
+        return items.get(randomIndex);
     }
 
     private int getRandomQuantity() {
-        return new Random().nextInt(5) + 1;
+        return new Random().nextInt(QUANTITY_UPPER_BOUND) + QUANTITY_LOWER_BOUND;
     }
 
     public List<Bill> getBills() {
