@@ -1,26 +1,20 @@
 package ro.ubb.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
-
+/**
+ * Class representation of a product from the shop.
+ *
+ * @author Andrei Gabor
+ */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Product {
 
     private String name;
-    private int price;
     private int totalQuantity;
-    private final Lock lock;
-
-    public Product() {
-        lock = new ReentrantLock();
-    }
-
-    public Product(String name, int price, int quantity) {
-        this.name = name;
-        this.price = price;
-        this.totalQuantity = quantity;
-        lock = new ReentrantLock();
-    }
+    private int price;
 }
