@@ -8,13 +8,13 @@ import java.util.List;
  */
 public class Main {
 
-    private static final int NUMBER_OF_TASKS = 10;
+    private static final int NUMBER_OF_TASKS = 5;
 
     public static void main(String[] args) {
         ConcurrentStack stack = new ConcurrentStack(1);
 
-        List<Integer> firstVector = Arrays.asList(1,1,1,1,1,1,1,1,1,1);
-        List<Integer> secondVector = Arrays.asList(1,1,1,1,1,1,1,1,1,1);
+        List<Integer> firstVector = Arrays.asList(1,1,1,1,1);
+        List<Integer> secondVector = Arrays.asList(2,2,2,2,2);
         Producer producer = new Producer(firstVector, secondVector, stack, NUMBER_OF_TASKS);
         Consumer consumer = new Consumer(stack, NUMBER_OF_TASKS);
 

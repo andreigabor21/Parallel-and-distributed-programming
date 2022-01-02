@@ -1,0 +1,16 @@
+C:\Users\Andrei Gabor\Desktop\UNI\3rd YEAR\PDP\Labs\Lab42\Lab42\bin\Debug\net5.0\Lab42.exe
+C:\Users\Andrei Gabor\Desktop\UNI\3rd YEAR\PDP\Labs\Lab42\Lab42\bin\Debug\net5.0\Lab42.deps.json
+C:\Users\Andrei Gabor\Desktop\UNI\3rd YEAR\PDP\Labs\Lab42\Lab42\bin\Debug\net5.0\Lab42.runtimeconfig.json
+C:\Users\Andrei Gabor\Desktop\UNI\3rd YEAR\PDP\Labs\Lab42\Lab42\bin\Debug\net5.0\Lab42.runtimeconfig.dev.json
+C:\Users\Andrei Gabor\Desktop\UNI\3rd YEAR\PDP\Labs\Lab42\Lab42\bin\Debug\net5.0\Lab42.dll
+C:\Users\Andrei Gabor\Desktop\UNI\3rd YEAR\PDP\Labs\Lab42\Lab42\bin\Debug\net5.0\ref\Lab42.dll
+C:\Users\Andrei Gabor\Desktop\UNI\3rd YEAR\PDP\Labs\Lab42\Lab42\bin\Debug\net5.0\Lab42.pdb
+C:\Users\Andrei Gabor\Desktop\UNI\3rd YEAR\PDP\Labs\Lab42\Lab42\obj\Debug\net5.0\Lab42.csprojAssemblyReference.cache
+C:\Users\Andrei Gabor\Desktop\UNI\3rd YEAR\PDP\Labs\Lab42\Lab42\obj\Debug\net5.0\Lab42.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Andrei Gabor\Desktop\UNI\3rd YEAR\PDP\Labs\Lab42\Lab42\obj\Debug\net5.0\Lab42.AssemblyInfoInputs.cache
+C:\Users\Andrei Gabor\Desktop\UNI\3rd YEAR\PDP\Labs\Lab42\Lab42\obj\Debug\net5.0\Lab42.AssemblyInfo.cs
+C:\Users\Andrei Gabor\Desktop\UNI\3rd YEAR\PDP\Labs\Lab42\Lab42\obj\Debug\net5.0\Lab42.csproj.CoreCompileInputs.cache
+C:\Users\Andrei Gabor\Desktop\UNI\3rd YEAR\PDP\Labs\Lab42\Lab42\obj\Debug\net5.0\Lab42.dll
+C:\Users\Andrei Gabor\Desktop\UNI\3rd YEAR\PDP\Labs\Lab42\Lab42\obj\Debug\net5.0\ref\Lab42.dll
+C:\Users\Andrei Gabor\Desktop\UNI\3rd YEAR\PDP\Labs\Lab42\Lab42\obj\Debug\net5.0\Lab42.pdb
+C:\Users\Andrei Gabor\Desktop\UNI\3rd YEAR\PDP\Labs\Lab42\Lab42\obj\Debug\net5.0\Lab42.genruntimeconfig.cache

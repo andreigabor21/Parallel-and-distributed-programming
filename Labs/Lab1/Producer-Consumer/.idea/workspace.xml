@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b34e14c1-1927-41a4-af47-e09269e88391" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../supermarket-inventory/target/classes/ro/ubb/logic/Shop.class" beforeDir="false" afterPath="$PROJECT_DIR$/../supermarket-inventory/target/classes/ro/ubb/logic/Shop.class" afterDir="false" />
-    </list>
+    <list default="true" id="b34e14c1-1927-41a4-af47-e09269e88391" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,6 +79,7 @@
       <workItem from="1634559823650" duration="117000" />
       <workItem from="1634663573277" duration="2999000" />
       <workItem from="1634670002373" duration="14000" />
+      <workItem from="1635169187964" duration="308000" />
     </task>
     <servers />
   </component>

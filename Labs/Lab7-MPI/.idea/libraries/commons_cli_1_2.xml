@@ -1,0 +1,30 @@
+<component name="libraryTable">
+  <library name="commons-cli-1.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../mpj-v0_44/lib/commons-cli-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../mpj-v0_44/lib/commons-codec-1.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../mpj-v0_44/lib/commons-io-2.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../mpj-v0_44/lib/daemon.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../mpj-v0_44/lib/daemonmanager.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../mpj-v0_44/lib/hybdev.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../mpj-v0_44/lib/javax.servlet.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../mpj-v0_44/lib/loader1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../mpj-v0_44/lib/loader2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../mpj-v0_44/lib/log4j-1.2.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../mpj-v0_44/lib/mpi.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../mpj-v0_44/lib/mpiExp.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../mpj-v0_44/lib/mpj.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../mpj-v0_44/lib/mpjbuf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../mpj-v0_44/lib/mpjdev.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../mpj-v0_44/lib/mxdev.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../mpj-v0_44/lib/niodev.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../mpj-v0_44/lib/runtimecommon.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../mpj-v0_44/lib/smpdev.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../mpj-v0_44/lib/starter.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../mpj-v0_44/lib/tools.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../mpj-v0_44/lib/xdev.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
